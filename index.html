@@ -19,8 +19,8 @@
       <div class="row">
         <div class="col" id="data-container">
           <!-- Data will be displayed here -->
-          <h3>Agregar una Gift card</h3>
-          <form>
+          <h3>Agregar una Gift card </h3>
+          <form id="formGift">
             <div class="row">
               <div class="col">
                 <lable> Gift </lable>
@@ -40,18 +40,18 @@
               </div>
             </div>
             <div class="row">
-              <div class="col">
+              <div class="col-6">
                 <lable> Tiempo </lable>
                 <select class="form-control" id="tiempo">
-                  <option value="1 mes"></option>
-                  <option value="3 meses"></option>
-                  <option value="5 meses"></option>
+                  <option value="1 mes">1 mes</option>
+                  <option value="3 meses">3 meses</option>
+                  <option value="5 meses">5 meses</option>
                 </select>
-                <div class="col">
-                  <label>Precio</label>
-                  <input type="number" class="form-control " id="Precio" required>
-                </div>
               </div>
+                <div class="col-6">
+                  <label>Precio</label>
+                  <input type="number" class="form-control " id="precio" required>
+                </div>
             </div>
             <div class="mt-3 d-flex justify ">
               <button class="btn btn-info" id="add-gift">Agregar</button>
@@ -59,7 +59,26 @@
           </form>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+          <h3>Tabla de contenido</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Gift</th>
+                <th>Tipo</th>
+                <th>Tiempo</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+              <!-- Data will be displayed here -->
+            </tbody>
+        </div>
+      </div>
     </div>
     <script src="./js/app.js" type="module"></script>
+    <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
   </body>
 </html>
